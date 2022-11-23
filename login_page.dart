@@ -199,37 +199,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
 
-            // =====container====
-            // Center(
-            //   child: Container(
-            //     width: 200,
-            //     height: 200,
-            //     decoration: BoxDecoration(
-            //      color: Colors.black,
-            //      shape: BoxShape.circle,
-            //      border: Border.all(color: Colors.black, width: 5,),
-            //      image:const DecorationImage(image: AssetImage('images/pic2.jpg'),
-            //      fit: BoxFit.cover,
-            //      ),
-            //      ),
-            //      ),
-            //     ),
-
-            // =========Image=======
-            // Column(
-            //   children: [
-            //     Image.asset(
-            //     'images/pic3.jpg',
-            //     fit: BoxFit.cover,
-            //     ),
-            //     const Padding(padding: EdgeInsets.fromLTRB(10, 0, 10, 5),),
-            //     Image.asset('images/pic1.jpg',
-            //     height: 300,
-
-            //     ),
-            //     ],
-
-            //     )
+          
           ],
         ),
       ),
