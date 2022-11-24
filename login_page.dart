@@ -58,49 +58,18 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Container(
-                margin: const EdgeInsets.only(left: 20),
-                color: Colors.transparent,
-                width: 300,
-                child: const Center(
-                    child: TextField(
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    labelText: "Enter Your Email",
-                    labelStyle: TextStyle(
-                      color: Colors.white,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.email_outlined,
-                      color: Color.fromRGBO(254, 237, 0, 1),
-                    ),
-                  ),
-                ))),
+            const Sign(
+              labeltext: "Enter Your Email",
+              iconData: Icons.email,
+            ),
             const SizedBox(
               height: 10,
             ),
-            Container(
-                margin: const EdgeInsets.only(left: 20),
-                color: Colors.transparent,
-                width: 300,
-                child: const Center(
-                    child: TextField(
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    labelText: "Enter Password",
-                    labelStyle: TextStyle(
-                      color: Colors.white,
-                    ),
-                    prefixIcon: Icon(
-                      Icons.vpn_key_outlined,
-                      color: Color.fromRGBO(254, 237, 0, 1),
-                    ),
-                  ),
-                ))),
+            const Sign(
+              labeltext: "Enter Password",
+              iconData: Icons.vpn_key_outlined,
+            ),
+            
             const SizedBox(
               height: 30,
             ),
@@ -198,12 +167,45 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-
-          
           ],
         ),
       ),
     );
+  }
+}
+
+class Sign extends StatelessWidget {
+  final String labeltext;
+  final IconData iconData;
+
+  const Sign({
+    Key? key,
+    required this.labeltext,
+    required this.iconData,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: const EdgeInsets.only(left: 20),
+        color: Colors.transparent,
+        width: 300,
+        child: Center(
+            child: TextField(
+          style: const TextStyle(
+            color: Colors.white,
+          ),
+          decoration: InputDecoration(
+            labelText: labeltext,
+            labelStyle:const TextStyle(
+              color: Colors.white,
+            ),
+            prefixIcon: Icon(
+              (iconData),
+              color: const Color.fromRGBO(254, 237, 0, 1),
+            ),
+          ),
+        )));
   }
 }
 
